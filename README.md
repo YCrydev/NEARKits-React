@@ -1,3 +1,7 @@
+# Project notes
+
+This project was a migration project of Near Kits UI to React Framework.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
