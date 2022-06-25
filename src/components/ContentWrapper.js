@@ -9,6 +9,7 @@ import {
   ChatAlt2Icon,
   CollectionIcon,
 } from "@heroicons/react/outline";
+import Footer from "./Footer";
 
 const ContentWrapper = ({ children }) => {
   return (
@@ -110,10 +111,10 @@ const ContentWrapper = ({ children }) => {
         </ul>
       </nav>
       <div className="flex flex-col container-fluid page-body-wrapper">
-        <nav className="container w-full mx-auto navbar">
-          <div className="container flex items-stretch flex-grow w-full mx-auto navbar-menu-wrapper">
-            <ul className="container w-full navbar-nav"></ul>
-            <ul className="container flex justify-end navbar-nav navbar-nav-right">
+        <nav className="navbar fixed-top">
+          <div className="flex items-stretch flex-grow w-full mx-auto navbar-menu-wrapper">
+            <ul className="w-full navbar-nav"></ul>
+            <ul className="container flex justify-end w-full navbar-nav navbar-nav-right">
               <li className="leading-4">
                 <button className="px-2 py-3 text-white rounded-sm outline-none bg-primaryBlue">
                   Connect Wallet
@@ -122,7 +123,10 @@ const ContentWrapper = ({ children }) => {
             </ul>
           </div>
         </nav>
-        <div className="bg-black main-panel">{children}</div>
+        <div className="bg-black main-panel">
+          <div className="content-wrapper">{children}</div>
+          <Footer />
+        </div>
       </div>
     </div>
   );

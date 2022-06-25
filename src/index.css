@@ -4,11 +4,9 @@
 
 @layer components {
   body {
-    @apply bg-primaryDark;
+    @apply h-auto p-0 overflow-x-hidden bg-primaryDark font-inter;
   }
-  .container-wrapper {
-    @apply relative flex w-full mx-auto overflow-hidden;
-  }
+
   .sidebar {
     @apply bg-primaryDark;
   }
@@ -19,6 +17,20 @@
   .nav-link {
     @apply hover:rounded-r-full;
   }
+}
+
+.container-wrapper {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.fixed-top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10000;
 }
 
 .sidebar {
@@ -65,14 +77,16 @@
 .page-body-wrapper {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-left: 0;
   padding-right: 0;
   width: calc(100% - 244px);
+  transition: all 0.25s ease;
 }
 
 .navbar {
   left: 244px;
+  background-color: #191c24;
 }
 
 .navbar .navbar-menu-wrapper {
@@ -96,19 +110,30 @@
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
 }
 
 .main-panel {
   width: 100%;
-  min-height: calc(100%-70px);
-  padding-top: 30px;
+  height: auto;
+  min-height: calc(200vh - 70px);
+  padding-top: 70px;
   display: flex;
   flex-direction: column;
   transition: width 0.25s ease margin 0.25s ease;
+  background-color: #000000;
+}
+
+.content-wrapper {
+  height: auto;
+  background: #000000;
+  padding: 1.875rem 1.75rem;
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  min-height: 100px;
 }
 
 @media only screen and (min-width: 992px) {

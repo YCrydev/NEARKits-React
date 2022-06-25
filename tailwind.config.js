@@ -15,6 +15,12 @@ module.exports = {
         primaryRed: "#fc424a",
         primaryBlue: "#0090e7",
       },
+      borderRadius: {
+        nearkits: "10px",
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],
