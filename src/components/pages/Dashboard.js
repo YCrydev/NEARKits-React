@@ -3,7 +3,7 @@ import { SearchIcon } from "@heroicons/react/outline";
 import DashboardCard from "../DashboardCard";
 import NFTCard from "../NFTCard";
 import nft1 from "../../assets/images/NFT-data/300.png";
-import Footer from "../Footer";
+import { Pagination } from "@mui/material";
 
 const Dashboard = () => {
   return (
@@ -80,7 +80,7 @@ const Dashboard = () => {
             </div>
             <div className="w-full py-5 mx-auto">
               <div className="grid grid-cols-5 gap-3">
-                {Array(15)
+                {Array(10)
                   .fill()
                   .map((i, x) => {
                     return (
@@ -95,6 +95,9 @@ const Dashboard = () => {
                     );
                   })}
               </div>
+            </div>
+            <div className="flex justify-center w-full py-3 mx-auto text-white bg-darkBase rounded-nearkits">
+              <Pagination count={10} color="primary" shape="rounded" />
             </div>
           </div>
         </div>

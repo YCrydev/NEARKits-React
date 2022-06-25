@@ -14,6 +14,7 @@ module.exports = {
         primaryYellow: "#ffab00",
         primaryRed: "#fc424a",
         primaryBlue: "#0090e7",
+        alternateDark: "#2c2e33",
       },
       borderRadius: {
         nearkits: "10px",
