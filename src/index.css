@@ -4,27 +4,63 @@
 
 @layer components {
   body {
-    @apply h-auto p-0 overflow-x-hidden bg-primaryDark font-inter;
+    @apply h-auto p-0 overflow-x-hidden bg-white dark:bg-primaryDark font-inter;
   }
 
   .sidebar {
-    @apply bg-primaryDark;
+    @apply bg-whiteTheme dark:bg-primaryDark;
+  }
+
+  .sidebar .sidebar-brand-wrapper {
+    @apply dark:bg-primaryDark bg-fadeWhite;
   }
 
   .nav {
     @apply flex flex-wrap p-0 list-none mb-[60px] pt-[70px];
   }
+
+  .navbar {
+    @apply bg-white dark:bg-primaryDark;
+  }
+
   .nav-link {
     @apply hover:rounded-r-full;
   }
   .card-wrapper {
-    @apply bg-primaryDark h-[384px] w-auto rounded-nearkits transition ease-in-out transform  hover:-translate-y-2 duration-200;
+    @apply dark:bg-primaryDark bg-white h-[384px] border border-gray-400 w-auto rounded-nearkits transition ease-in-out transform  hover:-translate-y-2 duration-200 hover:shadow-md;
   }
   .mynft-divider {
-    @apply grid gap-6 md:grid-cols-3 xl:grid-cols-5;
+    @apply grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 lg:grid-cols-3;
   }
   .button-base {
-    @apply px-4 py-2 text-sm font-medium text-white transition duration-150 ease-in-out bg-secondaryDark rounded-nearkits hover:bg-opacity-70;
+    @apply px-4 py-2 text-sm font-medium text-white transition duration-150 ease-in-out bg-black dark:bg-secondaryDark rounded-nearkits hover:bg-opacity-70;
+  }
+  .sidebar .nav .nav-item .nav-link {
+    @apply hover:bg-white dark:hover:bg-active;
+  }
+  .sidebar .nav .nav-item .nav-link {
+    @apply text-black dark:text-white;
+  }
+
+  .content-wrapper {
+    @apply transition duration-75 ease-in bg-secondaryWhite dark:bg-black;
+  }
+  .main-panel {
+    @apply bg-white dark:bg-black;
+  }
+  .MuiPagination-root ul li button {
+    @apply text-base text-black dark:text-white;
+  }
+
+  .MuiPagination-root ul li div {
+    @apply text-base text-black dark:text-white;
+  }
+
+  .MuiPagination-root ul li button svg {
+    @apply dark:fill-white fill-black;
+  }
+  .dashboard-value-wrapper {
+    @apply container flex flex-col w-full max-w-2xl md:w-[38%];
   }
 }
 
@@ -58,7 +94,6 @@ html {
 .sidebar .sidebar-brand-wrapper {
   width: 244px;
   height: 70px;
-  background-color: #191c24;
 }
 
 .sidebar .nav .nav-item {
@@ -69,13 +104,8 @@ html {
   display: flex;
   align-items: center;
   white-space: nowrap;
-  color: white;
   height: 46px;
   padding: 0.8rem 10px 0.8rem 1.188rem;
-}
-
-.sidebar .nav .nav-item .nav-link:hover {
-  background-color: #0f1015;
 }
 
 .active::before {
@@ -101,7 +131,6 @@ html {
 
 .navbar {
   left: 244px;
-  background-color: #191c24;
   transition: left 0.25s ease;
 }
 
@@ -140,31 +169,15 @@ html {
   display: flex;
   flex-direction: column;
   transition: width 0.25s ease margin 0.25s ease;
-  background-color: #000000;
 }
 
 .content-wrapper {
   height: auto;
-  background: #000000;
   padding: 1.875rem 1.75rem;
   width: 100%;
   flex-grow: 1;
   overflow: auto;
   width: 100%;
-}
-
-.MuiPagination-root ul li button {
-  color: white;
-  font-size: 16px;
-}
-
-.MuiPagination-root ul li div {
-  color: white;
-  font-size: 16px;
-}
-
-.MuiPagination-root ul li button svg {
-  fill: white;
 }
 
 @media only screen and (min-width: 992px) {

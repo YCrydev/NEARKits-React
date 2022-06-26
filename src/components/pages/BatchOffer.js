@@ -6,7 +6,7 @@ const BatchOffer = () => {
   return (
     <Tab.Group>
       <div className="w-full mx-auto space-y-5">
-        <div className="flex flex-row w-full px-6 space-x-2 max-w-7xl py-7 bg-primaryDark rounded-nearkits">
+        <div className="flex flex-row w-full max-w-4xl px-6 space-x-2 bg-white border border-black py-7 dark:bg-primaryDark rounded-nearkits">
           <Tab.List className="space-x-5">
             <Tab>
               {({ selected }) => (
@@ -15,7 +15,7 @@ const BatchOffer = () => {
                     className={
                       selected
                         ? "button-base "
-                        : "button-base bg-primaryDark border border-black"
+                        : "button-base dark:bg-primaryDark bg-white text-black border border-black dark:text-white "
                     }
                   >
                     Place Bids
@@ -30,7 +30,7 @@ const BatchOffer = () => {
                     className={
                       selected
                         ? "button-base "
-                        : "button-base bg-primaryDark border border-black"
+                        : "button-base dark:bg-primaryDark bg-white text-black border border-black dark:text-white "
                     }
                   >
                     My Offers
@@ -42,15 +42,15 @@ const BatchOffer = () => {
         </div>
         <Tab.Panels>
           <Tab.Panel className="space-y-5">
-            <div className="flex flex-col w-full px-6 space-y-2 max-w-7xl py-7 bg-primaryDark rounded-nearkits">
+            <div className="flex flex-col w-full max-w-4xl px-6 space-y-2 bg-white border border-black py-7 dark:bg-primaryDark rounded-nearkits">
               <form action="" className="relative inline-flex">
                 <div className="relative flex flex-row items-stretch w-full">
                   <input
                     type={"text"}
-                    className="w-full p-2 text-sm text-white border border-black outline-none rounded-tl-nearkits rounded-bl-nearkits bg-secondaryDark"
+                    className="w-full p-2 text-sm text-white bg-white border border-black outline-none rounded-tl-nearkits rounded-bl-nearkits dark:bg-secondaryDark"
                     placeholder="Search Nft collection"
                   />
-                  <button className="px-2 border border-black bg-primaryDark rounded-tr-nearkits rounded-br-nearkits">
+                  <button className="px-3 py-2 bg-white border border-black dark:bg-primaryDark rounded-tr-nearkits rounded-br-nearkits">
                     <SearchIcon className="w-6 text-darkText" />
                   </button>
                 </div>
@@ -63,14 +63,14 @@ const BatchOffer = () => {
             </div>
             <div className="w-full mx-auto">
               <div className="flex items-start justify-start">
-                <h1 className="font-bold text-white">Search Now!</h1>
+                <h1 className="font-bold dark:text-white">Search Now!</h1>
               </div>
             </div>
           </Tab.Panel>
           <Tab.Panel className="space-y-5">
-            <div className="flex flex-col w-full px-6 space-y-2 max-w-7xl py-7 bg-primaryDark rounded-nearkits">
+            <div className="flex flex-col w-full max-w-4xl px-6 space-y-2 bg-white border border-black py-7 dark:bg-primaryDark rounded-nearkits">
               <div className="flex items-start flex-start">
-                <h1 className="font-bold text-white">
+                <h1 className="font-bold dark:text-white">
                   You're using 0.05154 Ⓝ to store
                 </h1>
               </div>
@@ -82,7 +82,9 @@ const BatchOffer = () => {
             </div>
             <div className="w-full mx-auto">
               <div className="flex items-start justify-start">
-                <h1 className="font-bold text-white">No offers made yet!</h1>
+                <h1 className="font-bold dark:text-white">
+                  No offers made yet!
+                </h1>
               </div>
             </div>
           </Tab.Panel>

@@ -13,8 +13,8 @@ const MyNftCards = ({ imgSrc, nftTitle }) => {
         <div
           className={
             isActive
-              ? "border-2 border-blue-400 rounded-nearkits  bg-secondaryDark w-[274px] h-auto  md:w-auto md:mx-auto mx-auto"
-              : "w-[274px] h-auto bg-secondaryDark md:w-auto md:mx-auto mx-auto"
+              ? "border-2 border-blue-400 rounded-nearkits  dark:bg-secondaryDark bg-white w-[274px] h-auto  md:w-auto md:mx-auto mx-auto"
+              : "w-[274px] h-auto dark:bg-secondaryDark bg-white md:w-auto md:mx-auto mx-auto rounded-nearkits"
           }
           onClick={handleClick}
         >
@@ -26,7 +26,9 @@ const MyNftCards = ({ imgSrc, nftTitle }) => {
             />
           </div>
           <div className="flex items-start justify-start px-4 py-2">
-            <span className="text-lg font-medium text-white">{nftTitle}</span>
+            <span className="text-lg font-medium dark:text-white">
+              {nftTitle}
+            </span>
           </div>
         </div>
       </div>

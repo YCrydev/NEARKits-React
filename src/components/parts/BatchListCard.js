@@ -12,13 +12,13 @@ const ShowNftCard = ({ imgSrc, isShow }) => {
       leaveFrom="opacity-100 rotate-0 scale-100 "
       leaveTo="opacity-0 scale-95"
     >
-      <div className="flex flex-col w-32 rounded-nearkits bg-secondaryDark">
+      <div className="flex flex-col w-32 bg-white border border-black rounded-nearkits dark:bg-secondaryDark">
         <img
           src={imgSrc}
           alt={`metadata-of-${imgSrc}`}
           className="h-28 rounded-t-nearkits"
         />
-        <span className="px-2 mt-2 mb-4 font-medium text-white">
+        <span className="px-2 mt-2 mb-4 font-medium text-black dark:text-white">
           Extinct Heroes 45
         </span>
       </div>
@@ -49,20 +49,23 @@ const BatchListCard = ({ imgSrc, isListed }) => {
               <span className="font-bold">extinctheroes.tenk.near</span>
             </div>
             <div className="flex flex-row space-x-10 ">
-              <div className="flex flex-col w-full px-3 text-white bg-secondaryDark rounded-nearkits">
+              <div className="flex flex-col w-full px-3 text-black dark:bg-secondaryDark bg-fadeWhite dark:text-white rounded-nearkits">
                 <span>Nfts:</span>
                 <span>2</span>
               </div>
-              <div className="flex flex-col w-full px-3 text-white bg-secondaryDark rounded-nearkits">
+              <div className="flex flex-col w-full px-3 text-black dark:bg-secondaryDark bg-fadeWhite dark:text-white rounded-nearkits">
                 <span>Nfts:</span>
                 <span>2</span>
               </div>
-              <div className="flex flex-col w-full px-3 text-white bg-secondaryDark rounded-nearkits">
+              <div className="flex flex-col w-full px-3 text-black dark:bg-secondaryDark bg-fadeWhite dark:text-white rounded-nearkits">
                 <span>Nfts:</span>
                 <span>2</span>
               </div>
               <div className="flex w-full mx-auto">
-                <button className="button-base" onClick={openNft}>
+                <button
+                  className="text-black border border-black button-base bg-fadeWhite dark:text-white"
+                  onClick={openNft}
+                >
                   Show Nft
                 </button>
               </div>
@@ -107,20 +110,23 @@ const BatchListCard = ({ imgSrc, isListed }) => {
             <span className="font-bold">extinctheroes.tenk.near</span>
           </div>
           <div className="flex flex-row space-x-10 ">
-            <div className="flex flex-col w-full px-3 text-white bg-secondaryDark rounded-nearkits">
+            <div className="flex flex-col w-full px-3 text-black dark:bg-secondaryDark bg-fadeWhite dark:text-white rounded-nearkits">
               <span>Nfts:</span>
               <span>2</span>
             </div>
-            <div className="flex flex-col w-full px-3 text-white bg-secondaryDark rounded-nearkits">
+            <div className="flex flex-col w-full px-3 text-black dark:bg-secondaryDark bg-fadeWhite dark:text-white rounded-nearkits">
               <span>Nfts:</span>
               <span>2</span>
             </div>
-            <div className="flex flex-col w-full px-3 text-white bg-secondaryDark rounded-nearkits">
+            <div className="flex flex-col w-full px-3 text-black dark:bg-secondaryDark bg-fadeWhite dark:text-white rounded-nearkits">
               <span>Nfts:</span>
               <span>2</span>
             </div>
             <div className="flex w-full mx-auto">
-              <button className="button-base" onClick={openNft}>
+              <button
+                className="text-black border border-black button-base bg-fadeWhite dark:text-white"
+                onClick={openNft}
+              >
                 Show Nft
               </button>
             </div>
@@ -135,7 +141,7 @@ const BatchListCard = ({ imgSrc, isListed }) => {
             <ShowNftCard imgSrc={imgSrc} isShow={isShow} />
           </div>
           <div className="w-full p-3 mx-auto">
-            <h1 className="flex justify-start font-medium text-white">
+            <h1 className="flex justify-start font-medium dark:text-white">
               Action:
             </h1>
             <div className="flex flex-row space-x-2">

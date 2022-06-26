@@ -149,7 +149,7 @@ const NFTCard = ({ title, price, rarity, nftCreator, imageSrc }) => {
       <NftModal title={title} price={price} rarity={rarity} imageSrc={imageSrc}>
         <div className="card-wrapper">
           {/* Card Body */}
-          <div className="flex flex-col space-y-3 text-white">
+          <div className="flex flex-col space-y-3 text-black dark:text-white">
             {/* Image */}
             <div className="h-auto max-w-full rounded-t-nearkits">
               <img
