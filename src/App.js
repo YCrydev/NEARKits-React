@@ -5,6 +5,7 @@ import MyNfts from "./components/pages/MyNfts";
 import BatchOffer from "./components/pages/BatchOffer";
 import SendMessage from "./components/pages/SendMessage";
 import ManageMessage from "./components/pages/ManageMessage";
+import BatchList from "./components/pages/BatchList";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/myNfts" element={<MyNfts />} />
           <Route path="/batchOffer" element={<BatchOffer />} />
+          <Route path="/batchList" element={<BatchList />} />
           <Route path="/sendMessage" element={<SendMessage />} />
           <Route path="/manageMessage" element={<ManageMessage />} />
         </Routes>

@@ -8,10 +8,10 @@ import { Pagination } from "@mui/material";
 const Dashboard = () => {
   return (
     <>
-      <div className="w-full h-screen mx-auto ">
+      <div className="container w-full mx-auto">
         <div className="flex flex-col p-1">
           {/* Search Bar  */}
-          <div className="flex justify-center w-full mx-auto">
+          <div className="container flex justify-center w-full">
             <form className="inline-flex items-center w-full space-x-2">
               <input
                 type="text"
@@ -25,13 +25,22 @@ const Dashboard = () => {
           </div>
         </div>
         {/* Value Information */}
-        <div className="w-full py-2 mx-auto ">
-          <div className="flex flex-col md:flex-row md:space-x-5 ">
-            {Array(4)
-              .fill()
-              .map((i, x) => {
-                return <DashboardCard key={x} />;
-              })}
+        <div className="w-full py-2 mx-auto">
+          <div className="flex flex-col justify-center w-full space-y-2 xl:flex-row xl:space-y-0">
+            <div className="flex flex-col w-full space-y-2 md:flex-row md:space-y-0">
+              {Array(2)
+                .fill()
+                .map((i, x) => {
+                  return <DashboardCard key={x} />;
+                })}
+            </div>
+            <div className="flex flex-col w-full space-y-2 md:flex-row md:space-y-0">
+              {Array(2)
+                .fill()
+                .map((i, x) => {
+                  return <DashboardCard key={x} />;
+                })}
+            </div>
           </div>
         </div>
         {/* showing nfts */}
@@ -41,14 +50,14 @@ const Dashboard = () => {
               Displaying $props out of $props nft
             </h1>
             <div className="flex flex-row justify-between">
-              <form className="container flex flex-col w-full max-w-2xl space-y-2">
+              <form className="container flex flex-col w-[38%] max-w-2xl space-y-2 lg:w-full md:w-[40%]">
                 <label className="text-sm font-semibold text-white">
                   Display No:
                 </label>
                 <select
                   name="displayNo"
                   id="xxx"
-                  className="px-2 py-2 text-white outline-none bg-darkBase rounded-nearkits "
+                  className="px-2 py-2 text-white outline-none bg-darkBase rounded-nearkits"
                 >
                   <option value={10}>10</option>
                   <option value={25}>25</option>
@@ -57,7 +66,7 @@ const Dashboard = () => {
               </form>
               <form
                 action=""
-                className="container flex flex-col w-full max-w-2xl space-y-2"
+                className="container flex flex-col w-[38%] max-w-2xl space-y-2 lg:w-full md:w-[40%]"
               >
                 <label className="text-sm font-semibold text-white">
                   Display No:
@@ -79,7 +88,7 @@ const Dashboard = () => {
               </form>
             </div>
             <div className="w-full py-5 mx-auto">
-              <div className="grid grid-cols-5 gap-3">
+              <div className="grid grid-cols-1 gap-3 md:grid-cols-3 xl:grid-cols-5 lg:grid-cols-3">
                 {Array(10)
                   .fill()
                   .map((i, x) => {

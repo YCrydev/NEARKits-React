@@ -15,6 +15,7 @@ module.exports = {
         primaryRed: "#fc424a",
         primaryBlue: "#0090e7",
         alternateDark: "#2c2e33",
+        formDark: "#2a3038",
       },
       borderRadius: {
         nearkits: "10px",
