@@ -27,7 +27,7 @@
     @apply hover:rounded-r-full;
   }
   .card-wrapper {
-    @apply dark:bg-primaryDark bg-white h-[384px] border border-gray-400 w-auto rounded-nearkits transition ease-in-out transform  hover:-translate-y-2 duration-200 hover:shadow-md;
+    @apply dark:bg-primaryDark bg-white h-[384px] border border-black w-auto rounded-nearkits transition ease-in-out transform  hover:-translate-y-2 duration-200 hover:shadow-md;
   }
   .mynft-divider {
     @apply grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 lg:grid-cols-3;
@@ -88,7 +88,7 @@ html {
   font-weight: normal;
   padding: 0;
   width: 244px;
-  transition: width 0.25s ease;
+  transition: width 0.25s ease, background 0.25s ease;
 }
 
 .sidebar .sidebar-brand-wrapper {
@@ -202,7 +202,7 @@ html {
     width: 75px;
   }
 
-  .sidebar-offcanvas {
+  .sidebar.sidebar-offcanvas {
     position: fixed;
     max-height: calc(100vh - 70px);
     top: 70px;
