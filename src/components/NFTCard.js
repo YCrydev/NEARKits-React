@@ -6,8 +6,8 @@ import TransferModal from "./parts/TransferModal";
 
 const TraitsCard = ({ traitsName, traitsCategory }) => {
   return (
-    <div className="container w-full p-2 bg-secondaryDark rounded-nearkits">
-      <div className="flex flex-col items-start justify-start text-white">
+    <div className="container w-full p-2 dark:bg-secondaryDark bg-secondaryWhite rounded-nearkits">
+      <div className="flex flex-col items-start justify-start text-black dark:text-white">
         <span className="font-bold">{traitsCategory}</span>
         <span>{traitsName}</span>
       </div>
@@ -59,13 +59,13 @@ function NftModal({ children, title, price, rarity, imageSrc, traits }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-5xl overflow-hidden text-left align-middle transition-all transform bg-black border shadow-xl border-alternateDark rounded-2xl">
+                <Dialog.Panel className="w-full max-w-5xl overflow-hidden text-left align-middle transition-all transform bg-white border shadow-xl dark:bg-black border-alternateDark rounded-2xl">
                   <div
-                    className="flex justify-start p-3 text-white cursor-pointer"
+                    className="flex justify-start p-3 text-black cursor-pointer dark:text-white"
                     onClick={closeModal}
                   >
                     <div className="inline-flex space-x-2">
-                      <ArrowLeftIcon className="w-4 font-bold text-white" />
+                      <ArrowLeftIcon className="w-4 font-bold text-black dark:text-white" />
                       Back
                     </div>
                   </div>
@@ -78,7 +78,7 @@ function NftModal({ children, title, price, rarity, imageSrc, traits }) {
                           className="w-[300px] h-[300px]"
                         />
                       </div>
-                      <div className="container w-full p-2 mx-auto text-white">
+                      <div className="container w-full p-2 mx-auto text-black dark:text-white">
                         <div className="flex flex-col">
                           <div className="flex flex-col justify-start p-2 space-y-2">
                             <h1 className="font-bold">{title}</h1>
@@ -127,7 +127,7 @@ function NftModal({ children, title, price, rarity, imageSrc, traits }) {
                     </div>
                     <div className="w-full mx-auto border-t border-t-alternateDark">
                       <div className="flex items-center justify-center p-5">
-                        <div className="text-white cursor-pointer">
+                        <div className="cursor-pointer dark:text-white">
                           <TransferModal>Transfer</TransferModal>
                         </div>
                       </div>

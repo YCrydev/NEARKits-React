@@ -17,7 +17,7 @@ const TransferModal = ({ children }) => {
   return (
     <>
       <div className="flex items-center justify-center">
-        <button type="button" onClick={openTransfer}>
+        <button type="button" onClick={openTransfer} className="button-base">
           {children}
         </button>
       </div>
@@ -47,13 +47,13 @@ const TransferModal = ({ children }) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-xl overflow-hidden text-left align-middle transition-all transform bg-black border shadow-xl border-alternateDark rounded-2xl">
-                  <div className="flex flex-row justify-between p-6 text-white ">
+                <Dialog.Panel className="w-full max-w-xl overflow-hidden text-left align-middle transition-all transform bg-white border shadow-xl dark:bg-black border-alternateDark rounded-2xl">
+                  <div className="flex flex-row justify-between p-6 text-black dark:text-white ">
                     <div
                       className="inline-flex space-x-2 cursor-pointer"
                       onClick={closeTransfer}
                     >
-                      <ArrowLeftIcon className="w-4 font-bold text-white" />
+                      <ArrowLeftIcon className="w-4 font-bold text-black dark:text-white" />
                       Back
                     </div>
                     <div className="flex justify-end font-bold">
@@ -66,7 +66,7 @@ const TransferModal = ({ children }) => {
                       <label htmlFor="transfer_address"></label>
                       <input
                         type={"text"}
-                        className="w-full px-2 py-2 border border-black rounded-sm outline-none text-darkText bg-darkBase focus:border-green-500 focus:border"
+                        className="w-full px-2 py-2 bg-white border border-black rounded-sm outline-none text-darkText dark:bg-darkBase focus:border-green-500 focus:border"
                         placeholder="Enter Address"
                       />
                       <label htmlFor="" className=" text-darkText">
@@ -76,12 +76,12 @@ const TransferModal = ({ children }) => {
                   </div>
                   <div className="flex flex-row justify-end w-full px-3 py-4 mx-auto space-x-2 border-t border-t-alternateDark">
                     <div
-                      className="flex items-center justify-center px-3 py-2 text-sm font-bold text-black bg-white rounded-md cursor-pointer"
+                      className="flex items-center justify-center px-3 py-2 text-sm font-bold text-white bg-gray-500 rounded-md cursor-pointer dark:text-black dark:bg-white"
                       onClick={closeTransfer}
                     >
                       Close
                     </div>
-                    <div className="px-3 py-2 text-sm font-bold text-white bg-black cursor-pointer">
+                    <div className="px-3 py-2 text-sm font-bold text-white bg-black cursor-pointer rounded-nearkits">
                       Transfer
                     </div>
                   </div>
