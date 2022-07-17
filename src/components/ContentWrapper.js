@@ -28,10 +28,6 @@ const ContentWrapper = ({ children }) => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   setTheme(document.documentElement.classList.contains("dark"));
-  // }, []);
-
   useEffect(() => {
     if (theme === "dark") {
       window.document.documentElement.classList.add("dark");
@@ -50,15 +46,17 @@ const ContentWrapper = ({ children }) => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  // className="sidebar sidebar-offcanvas"
-
   return (
     <div className="container-wrapper">
       <nav
         id="sidebar"
-        className={sidebar ? "sidebar sidebar-offcanvas" : "sidebar"}
+        className={
+          sidebar
+            ? "sidebar sidebar-offcanvas sidebar-offcanvas-active"
+            : "sidebar sidebar-offcanvas"
+        }
       >
-        <div className="container fixed flex justify-center w-full p-3 mx-auto sidebar-brand-wrapper">
+        <div className="container fixed justify-center hidden w-full p-3 mx-auto sidebar-brand-wrapper lg:flex">
           <Link to={`/`}>
             {theme === "dark" ? (
               <img
@@ -77,7 +75,7 @@ const ContentWrapper = ({ children }) => {
         </div>
         <ul className="flex flex-col mb-16 overflow-hidden flex-nowrap nav">
           <li className="px-5 py-5">
-            <span className="pl-0 text-base font-medium text-darkText">
+            <span className="pl-0 text-sm font-medium text-darkText">
               Navigation
             </span>
           </li>
@@ -201,18 +199,40 @@ const ContentWrapper = ({ children }) => {
             <ul className="w-full navbar-nav"></ul>
             <ul className="container flex justify-end w-full space-x-2 navbar-nav navbar-nav-right">
               <li className="leading-4">
-                <button className="px-2 py-3 text-white rounded-sm outline-none bg-primaryBlue">
+                <button className="px-1 py-2 text-sm text-white rounded-md outline-none bg-primaryBlue">
                   Connect Wallet
                 </button>
               </li>
               <li>
-                <button
+                <div className={theme === "dark" ? "dark-mode" : "light-mode"}>
+                  <div className="container flex items-center justify-center">
+                    <span
+                      style={{ color: theme === "dark" ? "white" : "grey" }}
+                      className="text-2xl"
+                    >
+                      ☀︎
+                    </span>
+                    <div className="switch-checkbox">
+                      <label className="switch">
+                        <input type="checkbox" onChange={handleThemeSwitch} />
+                        <span className="slider round"></span>
+                      </label>
+                    </div>
+                    <span
+                      style={{ color: theme === "dark" ? "#c96dfd" : "grey" }}
+                      className="text-2xl"
+                    >
+                      ☽
+                    </span>
+                  </div>
+                </div>
+                {/* <button
                   type="button"
                   onClick={handleThemeSwitch}
                   className="transition-all duration-75 ease-in border border-black button-base bg-fadeWhite"
                 >
                   {theme === "dark" ? "🌙" : "☀️"}
-                </button>
+                </button> */}
               </li>
               <li className="lg:hidden">
                 <button

@@ -26,6 +26,9 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      screens: {
+        primary: "992px",
+      },
     },
   },
   plugins: [],

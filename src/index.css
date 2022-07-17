@@ -16,7 +16,7 @@
   }
 
   .nav {
-    @apply flex flex-wrap p-0 list-none mb-[60px] pt-[70px];
+    @apply flex flex-wrap p-0 list-none mb-[60px] lg:pt-[70px];
   }
 
   .navbar {
@@ -62,6 +62,10 @@
   .dashboard-value-wrapper {
     @apply container flex flex-col w-full max-w-2xl md:w-[38%];
   }
+
+  .sidebar {
+    @apply primary:border-r-2 dark:primary:border-r-purpleBase primary:border-r-white;
+  }
 }
 
 html {
@@ -89,6 +93,7 @@ html {
   padding: 0;
   width: 244px;
   transition: width 0.25s ease, background 0.25s ease;
+  z-index: 11;
 }
 
 .sidebar .sidebar-brand-wrapper {
@@ -185,7 +190,6 @@ html {
     position: fixed;
     height: 100%;
     margin-right: 244px;
-    border-right: 2px solid #8f5fe8;
   }
 
   .page-body-wrapper {
@@ -202,13 +206,20 @@ html {
     width: 75px;
   }
 
-  .sidebar.sidebar-offcanvas {
+  .sidebar-offcanvas {
     position: fixed;
     max-height: calc(100vh - 70px);
     top: 70px;
     bottom: 0;
     overflow: auto;
     right: -244px;
+    -webkit-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .sidebar-offcanvas.sidebar-offcanvas-active {
+    right: 0;
   }
 }
 
@@ -216,4 +227,80 @@ html {
   .navbar {
     left: 0;
   }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 14px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: grey;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 18px;
+  left: 6px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #8f5fe8;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch-checkbox {
+  padding: 10px;
 }
