@@ -23,7 +23,7 @@ const TransferModal = ({ children }) => {
       </div>
 
       <Transition appear show={isTransfer} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeTransfer}>
+        <Dialog as="div" className="relative z-[2000]" onClose={closeTransfer}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"

@@ -95,7 +95,7 @@ const Dashboard = () => {
                       <NFTCard
                         key={x}
                         imageSrc={nft1}
-                        title="El Cafe Cartel - Gen 1 #300"
+                        title="Cafe Cartel - Gen 1 #300"
                         price={"14.9N"}
                         rarity={164.99}
                         nftCreator={"El Café Cartel - Gen 1"}

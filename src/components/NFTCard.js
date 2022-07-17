@@ -35,7 +35,7 @@ function NftModal({ children, title, price, rarity, imageSrc, traits }) {
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="relative z-[1055]" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -159,8 +159,10 @@ const NFTCard = ({ title, price, rarity, nftCreator, imageSrc }) => {
               />
             </div>
             {/* Metadata */}
-            <div className="container flex flex-col w-full p-1 mx-auto space-y-3">
-              <div className="flex justify-start font-bold">{title}</div>
+            <div className="container flex flex-col w-full p-2 mx-auto space-y-3">
+              <div className="flex justify-start font-bold overflow-x-clip">
+                {title}
+              </div>
               <div className="flex justify-start text-xs font-semibold">
                 {price}
               </div>
