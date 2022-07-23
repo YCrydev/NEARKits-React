@@ -13,8 +13,15 @@ import {
   CollectionIcon,
   ViewListIcon,
 } from "@heroicons/react/solid";
-import { SortDescendingIcon } from "@heroicons/react/outline";
+import {
+  DocumentSearchIcon,
+  PhotographIcon,
+  QrcodeIcon,
+  SortDescendingIcon,
+} from "@heroicons/react/solid";
+import { FaDocker } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
+import { DocumentDuplicateIcon } from "@heroicons/react/outline";
 
 const ContentWrapper = ({ children }) => {
   const [theme, setTheme] = useState(null);
@@ -73,12 +80,27 @@ const ContentWrapper = ({ children }) => {
             )}
           </Link>
         </div>
+
         <ul className="flex flex-col mb-16 overflow-hidden flex-nowrap nav">
           <li className="px-5 py-5">
             <span className="pl-0 text-sm font-medium text-darkText">
               Navigation
             </span>
           </li>
+          <div className="px-2">
+            <div className="relative flex flex-row items-stretch w-full mb-2">
+              <input
+                type="text"
+                className="w-full px-2 py-1 text-black border dark:text-white bg-fadeWhite border-secondaryDark dark:bg-secondaryDark rounded-tl-nearkits rounded-bl-nearkits"
+                value="https://nearkits.io/gallery/burncr.near"
+              />
+              <div className="w-auto border-none text-alternateDark">
+                <button className="px-2 py-2 border border-secondaryDark bg-none rounded-tr-nearkits rounded-br-nearkits">
+                  <DocumentDuplicateIcon className="w-5" />
+                </button>
+              </div>
+            </div>
+          </div>
           <li className="nav-item">
             <NavLink
               to={`/`}
@@ -89,7 +111,7 @@ const ContentWrapper = ({ children }) => {
               }
             >
               <div className="inline-flex items-center">
-                <TemplateIcon className="w-5 m-3 text-primaryGreen" />
+                <TemplateIcon className="w-5 m-3 text-purpleBase" />
                 Dashboard
               </div>
             </NavLink>
@@ -105,7 +127,7 @@ const ContentWrapper = ({ children }) => {
               to={`/myNfts`}
             >
               <div className="inline-flex items-center">
-                <CollectionIcon className="w-5 m-3 text-purpleBase" />
+                <CollectionIcon className="w-5 m-3 text-primaryYellow" />
                 My NFTs
               </div>
             </NavLink>
@@ -121,7 +143,7 @@ const ContentWrapper = ({ children }) => {
               to={`/batchOffer`}
             >
               <div className="inline-flex items-center">
-                <ViewGridIcon className="w-5 m-3 text-primaryYellow" />
+                <ViewGridIcon className="w-5 m-3 text-primaryRed" />
                 Batch Offer
               </div>
             </NavLink>
@@ -137,7 +159,7 @@ const ContentWrapper = ({ children }) => {
               to={`/batchList`}
             >
               <div className="inline-flex items-center">
-                <ViewListIcon className="w-5 m-3 text-primaryRed" />
+                <ViewListIcon className="w-5 m-3 text-primaryBlue" />
                 Batch List
               </div>
             </NavLink>
@@ -152,7 +174,7 @@ const ContentWrapper = ({ children }) => {
               to={`/sendMessage`}
             >
               <div className="inline-flex items-center">
-                <ChatAltIcon className="w-5 m-3 text-primaryBlue" />
+                <ChatAltIcon className="w-5 m-3 text-primaryGreen" />
                 Send Message
               </div>
             </NavLink>
@@ -168,8 +190,74 @@ const ContentWrapper = ({ children }) => {
               to={`/manageMessage`}
             >
               <div className="inline-flex items-center">
-                <ChatAlt2Icon className="w-5 m-3 text-primaryGreen" />
+                <ChatAlt2Icon className="w-5 m-3 text-purpleBase" />
                 Manage Message
+              </div>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            {" "}
+            <NavLink
+              className={(navData) =>
+                navData.isActive
+                  ? "nav-link active dark:bg-active bg-white relative  rounded-r-full"
+                  : "nav-link"
+              }
+              to={`/customizeGallery`}
+            >
+              <div className="inline-flex items-center">
+                <PhotographIcon className="w-5 m-3 text-primaryYellow" />
+                Customize Gallery
+              </div>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            {" "}
+            <NavLink
+              className={(navData) =>
+                navData.isActive
+                  ? "nav-link active dark:bg-active bg-white relative  rounded-r-full"
+                  : "nav-link"
+              }
+              to={`/txHistory`}
+            >
+              <div className="inline-flex items-center">
+                <QrcodeIcon className="w-5 m-3 text-primaryRed" />
+                Transaction History
+              </div>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            {" "}
+            <NavLink
+              className={(navData) =>
+                navData.isActive
+                  ? "nav-link active dark:bg-active bg-white relative  rounded-r-full"
+                  : "nav-link"
+              }
+              to={`/snipe`}
+            >
+              <div className="inline-flex items-center">
+                <DocumentSearchIcon className="w-5 m-3 text-primaryBlue" />
+                Snipe
+              </div>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            {" "}
+            <NavLink
+              className={(navData) =>
+                navData.isActive
+                  ? "nav-link active dark:bg-active bg-white relative  rounded-r-full"
+                  : "nav-link"
+              }
+              to={`/whaleTracker`}
+            >
+              <div className="inline-flex items-center">
+                <span className="w-5 m-3 text-lg text-primaryGreen">
+                  <FaDocker />
+                </span>
+                Whale Tracker
               </div>
             </NavLink>
           </li>

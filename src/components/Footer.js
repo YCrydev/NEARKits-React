@@ -1,6 +1,5 @@
 import React from "react";
-import Twitter from "./icons/Twitter";
-import Discord from "./icons/Discord";
+import { BsTwitter, BsDiscord } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -12,7 +11,9 @@ const Footer = () => {
           target="_blank"
           className="transition duration-200 ease-in-out transform hover:-translate-y-2"
         >
-          <Twitter />
+          <span className="text-xl text-darkText">
+            <BsTwitter />
+          </span>
         </a>
         <a
           href="https://discord.com/invite/NEARKits "
@@ -20,7 +21,9 @@ const Footer = () => {
           target="_blank"
           className="transition duration-200 ease-in-out transform hover:-translate-y-2"
         >
-          <Discord />
+          <span className="text-xl text-darkText">
+            <BsDiscord />
+          </span>
         </a>
       </div>
       <div className="flex items-end justify-end text-sm text-darkText">

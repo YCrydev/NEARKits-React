@@ -19,6 +19,9 @@ module.exports = {
         whiteTheme: "#F1F0F0",
         fadeWhite: "#e3e3e3",
         secondaryWhite: "#F5F5F5",
+        disabled: "#0d0d0d",
+        primaryGrey: "#616161",
+        secondaryGrey: "#c2c2c2",
       },
       borderRadius: {
         nearkits: "10px",
