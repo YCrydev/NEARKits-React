@@ -1,5 +1,5 @@
 import React from "react";
-import loadingSvg from "../assets/images/loading_circle.svg";
+import loadingSvg from "../../assets/images/loading_circle.svg";
 
 const DashboardCard = () => {
   return (

@@ -1,25 +1,15 @@
 import React from "react";
-import { SearchIcon } from "@heroicons/react/outline";
-import MyNftCards from "../parts/MyNftCards";
+
+import MyNftCards from "../mynfts-card/MyNftCards";
 import elCartel from "../../assets/images/NFT-data/300.png";
 import nft1 from "../../assets/images/NFT-data/2877.png";
+import SearchBar from "../SearchBar/search-bar.component";
 
 const MyNfts = () => {
   return (
     <div className="w-full mx-auto">
       <div className="flex flex-col w-full max-w-5xl px-6 space-y-2 bg-white py-7 dark:bg-primaryDark rounded-nearkits">
-        <form action="" className="relative inline-flex">
-          <div className="relative flex flex-row items-stretch w-full">
-            <input
-              type={"text"}
-              className="w-full p-2 text-sm text-white bg-white border border-black outline-none rounded-tl-nearkits rounded-bl-nearkits dark:bg-secondaryDark"
-              placeholder="Search Nft collection"
-            />
-            <button className="px-2 bg-white border border-black dark:bg-primaryDark rounded-tr-nearkits rounded-br-nearkits">
-              <SearchIcon className="w-6 text-darkText" />
-            </button>
-          </div>
-        </form>
+        <SearchBar />
         <div className="button-transfer">
           <button className="px-4 py-2 font-medium text-white transition duration-150 ease-in-out bg-secondaryDark rounded-nearkits hover:bg-opacity-70">
             Transfer

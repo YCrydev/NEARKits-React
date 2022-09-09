@@ -1,6 +1,6 @@
 import { Tab } from "@headlessui/react";
 import React from "react";
-import BatchListCard from "../parts/BatchListCard";
+import BatchListCard from "../batchlist-card/BatchListCard";
 import extinct from "../../assets/images/NFT-data/45.png";
 
 const BatchList = () => {
@@ -14,9 +14,7 @@ const BatchList = () => {
                 <div className="button-placebids">
                   <button
                     className={
-                      selected
-                        ? "button-base"
-                        : "button-base dark:bg-primaryDark bg-white text-black border border-black dark:text-white "
+                      selected ? "button-base" : "button-base button-theme"
                     }
                   >
                     Un-listed Nfts
@@ -29,9 +27,7 @@ const BatchList = () => {
                 <div className="button-myOffers">
                   <button
                     className={
-                      selected
-                        ? "button-base"
-                        : "button-base dark:bg-primaryDark bg-white text-black dark:text-white border border-black"
+                      selected ? "button-base" : "button-base button-theme"
                     }
                   >
                     Listed Nfts

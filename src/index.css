@@ -66,6 +66,10 @@
   .sidebar {
     @apply primary:border-r-2 dark:primary:border-r-purpleBase primary:border-r-white;
   }
+
+  .button-theme {
+    @apply dark:bg-primaryDark bg-white text-black border border-black dark:text-white;
+  }
 }
 
 html {

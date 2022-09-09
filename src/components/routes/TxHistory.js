@@ -1,8 +1,8 @@
 import React from "react";
 import DoughnutCharts from "../Chart/Doughnut";
 import LineChart from "../Chart/LineChart";
-import TxDivider from "../TxDivider";
-import TxLabel from "../TxLabel";
+import TxDivider from "../TX-components/TxDivider";
+import TxLabel from "../TX-components/TxLabel";
 
 const TxHistory = () => {
   return (

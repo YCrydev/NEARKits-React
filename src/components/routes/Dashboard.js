@@ -1,9 +1,9 @@
 import React from "react";
-import { SearchIcon } from "@heroicons/react/outline";
-import DashboardCard from "../DashboardCard";
-import NFTCard from "../NFTCard";
+import DashboardCard from "../dashboard-card/DashboardCard";
+import NFTCard from "../nft-card/NFTCard";
 import nft1 from "../../assets/images/NFT-data/300.png";
 import { Pagination } from "@mui/material";
+import SearchBar from "../SearchBar/search-bar.component";
 
 const Dashboard = () => {
   return (
@@ -12,18 +12,7 @@ const Dashboard = () => {
         <div className="flex flex-col p-1">
           {/* Search Bar  */}
           <div className="container flex justify-center w-full">
-            <form action="" className="relative inline-flex w-full">
-              <div className="relative flex flex-row items-stretch w-full">
-                <input
-                  type={"text"}
-                  className="w-full p-2 text-sm text-white bg-white border border-black outline-none rounded-tl-nearkits rounded-bl-nearkits dark:bg-secondaryDark"
-                  placeholder="Search Nft collection"
-                />
-                <button className="px-3 py-2 bg-white border border-black dark:bg-primaryDark rounded-tr-nearkits rounded-br-nearkits">
-                  <SearchIcon className="w-6 text-darkText" />
-                </button>
-              </div>
-            </form>
+            <SearchBar dashboardStyle />
           </div>
         </div>
         {/* Value Information */}

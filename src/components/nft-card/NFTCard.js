@@ -2,7 +2,7 @@ import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { ArrowLeftIcon } from "@heroicons/react/outline";
-import TransferModal from "./parts/TransferModal";
+import TransferModal from "../transfer-modal/TransferModal";
 
 const TraitsCard = ({ traitsName, traitsCategory }) => {
   return (

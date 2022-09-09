@@ -1,7 +1,7 @@
 import { SearchIcon } from "@heroicons/react/outline";
 import React from "react";
 import nftTest from "../../assets/images/NFT-data/45.png";
-import BatchListCard from "../parts/BatchListCard";
+import BatchListCard from "../batchlist-card/BatchListCard";
 
 const Data = ({ src, timeStamp, price, title }) => {
   return (
