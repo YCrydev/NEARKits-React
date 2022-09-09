@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { SidebarContext } from "../Context/sidebar.context";
 import { SortDescendingIcon } from "@heroicons/react/solid";
 
-const Sidebar = ({ theme, handleThemeSwitch }) => {
+const Sidebar = ({ theme, handleThemeSwitch, isDark }) => {
   const { isOpen, setIsOpen } = useContext(SidebarContext);
 
   function openSidebar() {
@@ -29,7 +29,11 @@ const Sidebar = ({ theme, handleThemeSwitch }) => {
               </span>
               <div className="switch-checkbox">
                 <label className="switch">
-                  <input type="checkbox" onChange={handleThemeSwitch} />
+                  <input
+                    type="checkbox"
+                    checked={isDark}
+                    onChange={handleThemeSwitch}
+                  />
                   <span className="slider round"></span>
                 </label>
               </div>

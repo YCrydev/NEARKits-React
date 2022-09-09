@@ -11,15 +11,15 @@ const NavigationBar = ({ theme }) => {
     <>
       <div className="container fixed justify-center hidden w-full p-3 mx-auto sidebar-brand-wrapper lg:flex">
         <Link to={`/`}>
-          {theme === "dark" ? (
+          {theme ? (
             <img
-              src={nearKitsLogo}
+              src={nearKitsLogoBlack}
               alt="main-logo"
               className="flex items-center justify-center mx-auto w-36"
             />
           ) : (
             <img
-              src={nearKitsLogoBlack}
+              src={nearKitsLogo}
               alt="main-logo"
               className="flex items-center justify-center mx-auto w-36"
             />
@@ -39,6 +39,7 @@ const NavigationBar = ({ theme }) => {
               type="text"
               className="w-full px-2 py-1 text-black border dark:text-white bg-fadeWhite border-secondaryDark dark:bg-secondaryDark rounded-tl-nearkits rounded-bl-nearkits"
               value="https://nearkits.io/gallery/burncr.near"
+              readOnly
             />
             <div className="w-auto border-none text-alternateDark">
               <button className="px-2 py-2 border border-secondaryDark bg-none rounded-tr-nearkits rounded-br-nearkits">
