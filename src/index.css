@@ -70,6 +70,9 @@
   .button-theme {
     @apply dark:bg-primaryDark bg-white text-black border border-black dark:text-white;
   }
+  .nav-link-dropdown{
+    @apply text-darkText hover:text-white
+  }
 }
 
 html {
@@ -308,3 +311,20 @@ input:checked + .slider:before {
 .switch-checkbox {
   padding: 10px;
 }
+
+.nav-link-dropdown {
+  padding: 0.8rem 10px 0.8rem 1.188rem;
+  position: relative;
+  font-size: 0.855rem;
+  line-height: 1;
+  height: auto;
+  border-top: 0;
+  display: inline-block;
+}
+
+.sub-menu{
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style: none;
+}
+

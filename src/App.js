@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { lazy, Suspense } from "react";
 import Spinner from "./components/spinner/spinner.component";
+import Token from "./components/routes/Token";
 
 const Dashboard = lazy(() => import("./components/routes/Dashboard"));
 const MyNfts = lazy(() => import("./components/routes/MyNfts"));
@@ -10,6 +11,8 @@ const BatchOffer = lazy(() => import("./components/routes/BatchOffer"));
 const SendMessage = lazy(() => import("./components/routes/SendMessage"));
 const ManageMessage = lazy(() => import("./components/routes/ManageMessage"));
 const BatchList = lazy(() => import("./components/routes/BatchList"));
+const BatchBuy = lazy(() => import("./components/routes/BatchBuy"));
+
 const CustomizeGallery = lazy(() =>
   import("./components/routes/CustomizeGallery")
 );
@@ -29,6 +32,7 @@ function App() {
             <Route path="/myNfts" element={<MyNfts />} />
             <Route path="/batchOffer" element={<BatchOffer />} />
             <Route path="/batchList" element={<BatchList />} />
+            <Route path="/batchBuy" element={<BatchBuy />} />
             <Route path="/sendMessage" element={<SendMessage />} />
             <Route path="/manageMessage" element={<ManageMessage />} />
             <Route path="/customizeGallery" element={<CustomizeGallery />} />
@@ -37,6 +41,7 @@ function App() {
             <Route path="/snipe/collection_info" element={<CollectionInfo />} />
             <Route path="/whaleTracker" element={<WhaleTracker />} />
             <Route path="/whaleTracker/informations" element={<DataInfo />} />
+            <Route path="/token" element={<Token />} />
           </Routes>
         </ContentWrapper>
       </BrowserRouter>

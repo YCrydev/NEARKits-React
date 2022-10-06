@@ -1,3 +1,4 @@
+import { useState } from "react";
 import LinkComponent from "../link-component/link.component";
 import { FaDocker } from "react-icons/fa";
 import {
@@ -13,6 +14,7 @@ import {
   PhotographIcon,
   QrcodeIcon,
 } from "@heroicons/react/solid";
+import Dropdown from "../Dropdown/Dropdown";
 
 const LinkAdress = () => {
   return (
@@ -27,15 +29,7 @@ const LinkAdress = () => {
         My NFTs
       </LinkComponent>
 
-      <LinkComponent path={"/batchOffer"}>
-        <ViewGridIcon className="w-5 m-3 text-primaryRed" />
-        Batch Offer
-      </LinkComponent>
-
-      <LinkComponent path={"/batchList"}>
-        <ViewListIcon className="w-5 m-3 text-primaryBlue" />
-        Batch List
-      </LinkComponent>
+      <Dropdown />
 
       <LinkComponent path={"/sendMessage"}>
         <ChatAltIcon className="w-5 m-3 text-primaryGreen" />
@@ -55,6 +49,11 @@ const LinkAdress = () => {
       <LinkComponent path={"/txHistory"}>
         <QrcodeIcon className="w-5 m-3 text-primaryRed" />
         Transaction History
+      </LinkComponent>
+
+      <LinkComponent path={"/token"}>
+        <QrcodeIcon className="w-5 m-3 text-primaryRed" />
+        Tokens
       </LinkComponent>
 
       <LinkComponent path={"/snipe"}>
