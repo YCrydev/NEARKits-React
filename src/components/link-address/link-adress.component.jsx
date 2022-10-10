@@ -3,11 +3,9 @@ import LinkComponent from "../link-component/link.component";
 import { FaDocker } from "react-icons/fa";
 import {
   TemplateIcon,
-  ViewGridIcon,
   ChatAltIcon,
   ChatAlt2Icon,
   CollectionIcon,
-  ViewListIcon,
 } from "@heroicons/react/solid";
 import {
   DocumentSearchIcon,
